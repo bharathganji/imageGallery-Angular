@@ -1,0 +1,18 @@
+<mat-tab-group mat-stretch-tabs>
+  <mat-tab label="All Works"
+    ><div ngClass="row custom" id="images">
+      <app-image-card
+        *ngFor="let image of ImageUrlArray"
+        [image]="image"
+      ></app-image-card>
+    </div>
+  </mat-tab>
+  <mat-tab label="Our Works">
+    <div ngClass="row custom" id="images">
+      <app-image-card
+        *ngFor="let image of ownImageUrlArray"
+        [image]="image"
+      ></app-image-card>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,39 @@
+<mat-card ngClass="example-card">
+  <img
+    (click)="openGallery()"
+    mat-card-image
+    [src]="image.url"
+    [alt]="image.name"
+    loading="lazy"
+    #im
+  />
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="contactWhatsapp(this)">
+      Enquire <mat-icon>whatsapp</mat-icon>
+    </button>
+    <span class="example-spacer"></span>&nbsp;&nbsp;&nbsp;
+    <span class="dotdotdot">{{ image.name }}</span>
+
+    <!-- <button
+      mat-icon-button
+      name="fieldName"
+      ngDefaultControl
+      [color]="color"
+      aria-label="Example icon-button with a heart icon"
+      style="float: right"
+      (click)="toggleFavorite(this)"
+    > -->
+    <mat-icon
+      name="fieldName"
+      ngDefaultControl
+      [color]="color"
+      aria-label="Example icon-button with a heart icon"
+      style="float: right"
+      (click)="toggleFavorite(this)"
+      >favorite</mat-icon
+    >
+    <span class="example-spacer"></span>
+    <!-- </button> -->
+  </mat-card-actions>
+</mat-card>
